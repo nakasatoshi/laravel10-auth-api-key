@@ -18,10 +18,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/demae', function() {
-    return response()->json(['status' => 'OK!']);
-});
-
 Route::middleware('auth.apikey')->get('/tes/data', function () {
     return response()->json(['message' => 'Authenticated successfully!']);
 });
